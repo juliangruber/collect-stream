@@ -3,6 +3,8 @@
 
 Collect a readable stream's output and errors.
 
+[![build status](https://secure.travis-ci.org/juliangruber/collect-stream.png)](http://travis-ci.org/juliangruber/collect-stream)
+
 ## Usage
 
 ```js
