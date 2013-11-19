@@ -7,6 +7,9 @@ Collect a readable stream's output and errors.
 
 ## Usage
 
+Give it a readable stream and a function and it will call latter with the
+potential error and a smart representation of the data the stream emitted.
+
 ```js
 var collect = require('collect-stream');
 
