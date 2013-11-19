@@ -2,7 +2,7 @@ var concat = require('concat-stream');
 var once = require('once');
 
 /**
- * Call output and errors of `stream`.
+ * Collect output and errors of `stream`.
  *
  * @param {Stream} stream
  * @param {Function} fn
