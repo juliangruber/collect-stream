@@ -1,0 +1,33 @@
+{
+  "name": "collect-stream",
+  "description": "Collect a readable stream's output and errors",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/collect-stream.git"
+  },
+  "homepage": "https://github.com/juliangruber/collect-stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "dependencies": {
+    "once": "~1.3.0",
+    "concat-stream": "~1.2.0"
+  },
+  "devDependencies": {
+    "tape": "~2.1.0",
+    "through": "~2.3.4"
+  },
+  "keywords": [
+    "collect",
+    "stream",
+    "concat"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
