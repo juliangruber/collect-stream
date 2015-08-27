@@ -9,7 +9,7 @@
   "homepage": "https://github.com/juliangruber/collect-stream",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "make test"
   },
   "dependencies": {
     "once": "^1.3.0",
