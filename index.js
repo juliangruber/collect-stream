@@ -1,17 +1,11 @@
-var concat = require('concat-stream');
-var once = require('once');
+import { default as concat } from 'concat-stream';
+import { default as once } from 'once';
 
-/**
- * Collect output and errors of `stream`.
- *
- * @param {Stream} stream
- * @param {Function} fn
- */
-
-module.exports = function collect(stream, fn) {
+export default function collect(stream, fn) {
   fn = once(fn);
   stream.on('error', fn);
-  stream.pipe(concat(function(data) {
+  stream.pipe(concat(data => {
     fn(null, data);
   }));
 };
+
