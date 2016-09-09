@@ -60,7 +60,8 @@ test('object', t => {
 test('array without flattening', t => {
   t.plan(2);
 
-  var stream = through();
+  var stream = through(),
+      opts = {encoding: "object"};
 
   process.nextTick(() => {
     stream.queue([{ foo: true }]);
@@ -68,7 +69,7 @@ test('array without flattening', t => {
     stream.queue(null);
   });
 
-  collect(stream, (err, data) => {
+  collect(opts, stream, (err, data) => {
     t.error(err);
     t.deepEqual(data, [
       [{ foo: true }],
