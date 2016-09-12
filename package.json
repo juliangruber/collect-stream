@@ -1,7 +1,7 @@
 {
   "name": "collect-stream",
   "description": "Collect a readable stream's output and errors",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/juliangruber/collect-stream.git"
