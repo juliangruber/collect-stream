@@ -57,19 +57,19 @@ test('object', t => {
   });
 });
 
-test('array without flattening', t => {
+test('concat-stream options', t => {
   t.plan(2);
 
-  var stream = through(),
-      opts = {encoding: "object"};
-
+  var stream = through();
   process.nextTick(() => {
     stream.queue([{ foo: true }]);
     stream.queue([{ bar: true }]);
     stream.queue(null);
   });
 
-  collect(opts, stream, (err, data) => {
+  collect({
+    encoding: 'object'
+  }, stream, (err, data) => {
     t.error(err);
     t.deepEqual(data, [
       [{ foo: true }],
