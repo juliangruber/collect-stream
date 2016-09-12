@@ -1,11 +1,10 @@
 import { default as concat } from 'concat-stream';
 import { default as once } from 'once';
 
-export default function collect(opts, stream, fn) {
-  if (!fn) {
-    fn = stream;
-    stream = opts;
-    opts = null;
+export default function collect(stream, opts, fn) {
+  if (typeof opts === 'function') {
+    fn = opts;
+    opts = {};
   }
   fn = once(fn);
   stream.on('error', fn);

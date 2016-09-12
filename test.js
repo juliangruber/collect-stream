@@ -67,9 +67,9 @@ test('concat-stream options', t => {
     stream.queue(null);
   });
 
-  collect({
+  collect(stream, {
     encoding: 'object'
-  }, stream, (err, data) => {
+  }, (err, data) => {
     t.error(err);
     t.deepEqual(data, [
       [{ foo: true }],

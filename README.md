@@ -31,9 +31,9 @@ Give it options and it will pass them to [concat-stream](https://github.com/maxo
 ```js
 import collect from 'collect-stream';
 
-opts = {encoding: "object"}
-
-collect(opts, unknownStream, (err, data) => {
+collect(someStream, {
+  encoding: 'object'
+}, (err, data) => {
   console.log(data) // forced to be an array of objects
 });
 ```
