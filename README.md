@@ -26,6 +26,18 @@ collect(objectStream, (err, data) => {
 });
 ```
 
+Give it options and it will pass them to [concat-stream](https://github.com/maxogden/concat-stream/).
+
+```js
+import collect from 'collect-stream';
+
+collect(someStream, {
+  encoding: 'object'
+}, (err, data) => {
+  console.log(data) // forced to be an array of objects
+});
+```
+
 ## Installation
 
 ```bash

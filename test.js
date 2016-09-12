@@ -57,6 +57,27 @@ test('object', t => {
   });
 });
 
+test('concat-stream options', t => {
+  t.plan(2);
+
+  var stream = through();
+  process.nextTick(() => {
+    stream.queue([{ foo: true }]);
+    stream.queue([{ bar: true }]);
+    stream.queue(null);
+  });
+
+  collect(stream, {
+    encoding: 'object'
+  }, (err, data) => {
+    t.error(err);
+    t.deepEqual(data, [
+      [{ foo: true }],
+      [{ bar: true }]
+    ]);
+  });
+});
+
 test('error', t => {
   t.plan(1);
   
