@@ -16,8 +16,8 @@
     "concat-stream": "^1.2.0"
   },
   "devDependencies": {
-    "babel": "^5.8.21",
-    "tape": "~2.1.0",
+    "babel": "^6.5.2",
+    "tape": "~4.6.2",
     "through": "~2.3.4"
   },
   "keywords": [
